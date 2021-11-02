@@ -1,6 +1,7 @@
 const { Command } = require('commander')
 const program = new Command()
 const { tinyimg } = require('./commands/tinyimg')
+const package = require('../package.json')
 
 program
   .command('tinyimg')
@@ -11,5 +12,5 @@ program
     tinyimg(commandAndOptions)
   })
 
-program.version('0.1.0')
+program.version(package.version)
 program.parse(process.argv)
