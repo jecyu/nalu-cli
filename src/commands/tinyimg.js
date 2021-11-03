@@ -64,7 +64,7 @@ function fileFilter(sourcePath) {
     if (
       fileStat.size <= tinyConfig.max &&
       fileStat.isFile() &&
-      tinyConfig.exts.includes(path.extname(file))
+      tinyConfig.exts.includes(path.extname(sourcePath))
     ) {
       tinyConfig.files.push(sourcePath)
     }
